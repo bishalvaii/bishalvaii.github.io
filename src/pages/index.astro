@@ -1,0 +1,40 @@
+---
+import App from '../components/App';
+import '../styles/styles.css';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Explore and search Pokémon using
+	 our website. Find detailed information about various Pokémon,
+	  including their names, images, and types."  />
+	  <script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "WebSite",
+		  "name": "Astro with React Query Pokémon Viewer",
+		  "url": "https://yourwebsite.com",
+		  "description": "Explore and search Pokémon using Astro with React 
+		  Query. Find detailed information about various Pokémon, 
+		  including their names, images, and types."
+		}
+		</script>
+	<title>View and Search Pokémon </title>
+
+	<style>
+		 h1 {
+      text-align: center;
+      font-size: 2rem;
+	  font-family: Poppins;
+    }
+	</style>
+  </head>
+  <body>
+    <h1 style=""> View and search pokemons</h1>
+    <!-- This is the Astro Island where React will be hydrated -->
+    <App client:load />
+  </body>
+</html>
