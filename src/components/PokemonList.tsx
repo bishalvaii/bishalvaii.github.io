@@ -49,7 +49,7 @@ const PokemonList: React.FC = () => {
   if (isLoading) return <div>Please wait till the data loads...</div>;
   if (error) return <div>Error loading Pokémon data</div>;
 
-  const limit = 20; // Number of Pokémon per page
+  const limit = 20; s
   const paginatedPokemon = filteredPokemon.slice(currentPage * limit, (currentPage + 1) * limit);
 
   return (
