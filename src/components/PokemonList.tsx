@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import SearchBar from './SearchBar';
 import PokemonCard from './PokemonCard';
-import { fetchAllPokemon } from '../api/fetchPokemon';
+import { fetchAllPokemon, type PokemonDetails } from '../api/fetchPokemon';
 
 const PokemonList: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [currentPage, setCurrentPage] = useState(0);
-  const [filteredPokemon, setFilteredPokemon] = useState([]);
+  const [filteredPokemon, setFilteredPokemon] = useState<PokemonDetails[]>([]);
   const [pageNumberInput, setPageNumberInput] = useState('');
 
   const { data, error, isLoading } = useQuery({
@@ -58,12 +58,21 @@ const PokemonList: React.FC = () => {
       {paginatedPokemon.length === 0 && <div style={{fontWeight: 'bold', fontSize: 20, justifyContent: 'center', alignItems: 'center', textAlign: 'center'}}>No results found</div>}
       <div className="pokemon-list">
         {paginatedPokemon.map((pokemon) => (
-          <PokemonCard
-            key={pokemon.name}
-            name={pokemon.name}
-            image={pokemon.sprites.front_default}
-            type={pokemon.types[0].type.name}
-          />
+         <PokemonCard
+         key={pokemon.name}
+         pokemon={{
+           name: pokemon.name,
+           sprites: {
+             front_default: pokemon.sprites.front_default
+           },
+           types: [{
+             type: {
+               name: pokemon.types[0].type.name
+             }
+           }]
+         }}
+       />
+       
         ))}
       </div>
       <div className="pagination">

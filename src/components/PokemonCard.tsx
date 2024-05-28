@@ -1,34 +1,34 @@
 import React from 'react';
 
-interface PokemonCardProps {
+interface Pokemon {
   name: string;
-  image: string;
-  type: string;
+  sprites: {
+    front_default: string;
+  };
+  types: {
+    type: {
+      name: string;
+    };
+  }[];
 }
 
-const typeColors = {
+interface PokemonCardProps {
+  pokemon: Pokemon;
+}
+
+const typeColors: { [key: string]: string } = {
   grass: '#78C850',
   fire: '#F08030',
   water: '#6890F0',
-  bug: '#A8B820',
-  normal: '#A8A878',
-  poison: '#A040A0',
-  electric: '#F8D030',
-  ground: '#E0C068',
-  fairy: '#EE99AC',
-  fighting: '#C03028',
-  psychic: '#F85888',
-  rock: '#B8A038',
-  ghost: '#705898',
-  ice: '#98D8D8',
-  dragon: '#7038F8',
-  dark: '#705848',
-  steel: '#B8B8D0',
-  flying: '#A890F0',
+  // Add more type colors as needed
 };
 
-const PokemonCard: React.FC<PokemonCardProps> = ({ name, image, type }) => {
-  const backgroundColor = typeColors[type] || '#A8A878'; // default to normal type color if type not found
+const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon }) => {
+  const { name, sprites, types } = pokemon;
+  const image = sprites?.front_default || ''; // Use optional chaining to handle null or undefined sprites
+  const type = types?.[0]?.type?.name || ''; // Use optional chaining to handle null or undefined types
+
+  const backgroundColor = typeColors[type] || '#A8A878';
 
   return (
     <div className="pokemon-card" style={{ backgroundColor }}>

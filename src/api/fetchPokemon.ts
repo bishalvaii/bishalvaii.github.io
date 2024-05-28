@@ -5,7 +5,7 @@ interface Pokemon {
     url: string;
   }
   
-  interface PokemonDetails {
+  export interface PokemonDetails {
     id: number;
     name: string;
     sprites: {
