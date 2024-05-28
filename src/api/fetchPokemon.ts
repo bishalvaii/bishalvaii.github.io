@@ -1,4 +1,4 @@
-// src/components/fetchPokemon.ts
+
 
 interface Pokemon {
     name: string;
@@ -19,7 +19,7 @@ interface Pokemon {
   }
   
   export const fetchAllPokemon = async (): Promise<PokemonDetails[]> => {
-    const limit = 1118; // Fetching the first 151 Pokémon
+    const limit = 1118; // Fetching all the pokemons from the api
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}`);
     if (!response.ok) {
       throw new Error('Network response was not ok');
