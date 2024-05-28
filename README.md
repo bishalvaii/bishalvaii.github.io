@@ -4,13 +4,13 @@ This is a simple web application that allows users to search for Pokémon by nam
 
 Setup Instructions
 
-To view this project live, go to this link: 
+To view this project live, go to this link: https://bishalvaii.github.io/
 To run this project locally, follow these steps:
 
 Clone the Repository:
 
-bash
-Copy code
+
+
 git clone https://github.com/bishalvaii/pokimane-finder.git
 
 Install Dependencies:
@@ -31,18 +31,21 @@ Once the dependencies are installed, start the development server:
 npm run dev
 or
 
-yarn start
+yarn run dev
 
 View the Application:
-Open your web browser and navigate to http://localhost:3000 to view the Pokémon Search application.
+Open your web browser and navigate to http://localhost:4323 to view the Pokémon Search application.
 
 
 
 Technologies Used
+Astro
+Island Architecture
 React
 React Query
-JavaScript (ES6+)
+Typescript 
 HTML5
 CSS3
+
 Credits
 Pokémon data provided by PokéAPI
