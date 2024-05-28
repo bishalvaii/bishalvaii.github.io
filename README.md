@@ -1,54 +1,48 @@
-# Astro Starter Kit: Basics
+Pokémon Search
 
-```sh
-npm create astro@latest -- --template basics
-```
+This is a simple web application that allows users to search for Pokémon by name using the PokéAPI. Users can view a list of Pokémon with their names, images, and types, and search for specific Pokémon by entering keywords in the search bar.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+Setup Instructions
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+To view this project live, go to this link: 
+To run this project locally, follow these steps:
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+Clone the Repository:
 
-## 🚀 Project Structure
+bash
+Copy code
+git clone https://github.com/bishalvaii/pokimane-finder.git
 
-Inside of your Astro project, you'll see the following folders and files:
+Install Dependencies:
+Navigate to the project directory and install the necessary dependencies using npm or yarn:
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+npm install
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
-Any static assets, like images, can be placed in the `public/` directory.
+or 
+yarn
+yarn install
 
-## 🧞 Commands
+Start the Development Server:
+Once the dependencies are installed, start the development server:
 
-All commands are run from the root of the project, from a terminal:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+npm run dev
+or
 
-## 👀 Want to learn more?
+yarn start
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+View the Application:
+Open your web browser and navigate to http://localhost:3000 to view the Pokémon Search application.
+
+
+
+Technologies Used
+React
+React Query
+JavaScript (ES6+)
+HTML5
+CSS3
+Credits
+Pokémon data provided by PokéAPI
